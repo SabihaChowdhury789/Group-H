@@ -1,58 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Home - Med-X-Mart</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="css/style.css" />
-    <script src="js/script.js"></script>
+  <meta charset="UTF-8">
+  <title>Relief & Support | Home</title>
+  <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
-
-  <!-- Header -->
   <header>
-        <div class="logo-container">
-      <img src="images/Med-X-Mart .jpg" alt="Med-X-Mart Logo" class="logo">
-
-
-    <h1>Med-X-Mart</h1>
-
-    <div id="hamburger" class="hamburger">&#9776;</div>
-
-    <nav id="nav-menu" class="nav-links">
->
-      <a href="index.html">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="contact.html">Contact</a>
-      <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+    <div class="logo-title">
+      <img src="images/Med-X-Mart.jpg" alt=" Med-X-Mart Logo" class="logo"/>
+      <h1><Med-X-Mart></h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About Us</a></li>
+        
+      </ul>
     </nav>
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Search products...">
+      <button onclick="searchSite()">🔍</button>
+    </div>
   </header>
 
-  <!-- Main starts-->
   <main>
-    <h2>Available Products 🩺</h2>
-    <div class="product-grid" id="productGrid">
-      <!-- JavaScript will inject product cards here -->
+    <h2>Welcome to Med-X-Mart</h2>
+    <p>We provide essential products and services to support your well-being. Explore our range and find what you need to feel better, live better, and thrive. Our motto is Innovate, Equip, Heal.</p>
+
+    <div class="image-gallery">
+      <img src="images/wheelchair.jpg" alt="Wheelchair">
+      <img src="images/crutch.jpg" alt="Crutch">
+      <img src="images/stetho.jpg" alt="Stethoscope">
     </div>
-    <div id="descriptionBox" class="description-box"></div>
   </main>
 
-  <!-- Cookie Consent Banner -->
-  <div class="cookie-banner" id="cookieBanner">
-    <h3> But First Have Cookies🍪</h3>
-    <p> The site uses cookies to enhance your experience.</p>
-    <button onclick="acceptCookies()">Accept All</button>
-    <button onclick="declineCookies()">Decline All</button>
-
-  </div>
-
-  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Med-X-Mart. All rights reserved.</p>
+    &copy; 2025 Med -X- Mart  All rights reserved.
   </footer>
 
-  
-
+  <script>
+    function searchSite() {
+      const query = document.getElementById('searchInput').value.trim();
+      if (query) {
+        alert("Searching for: " + query);
+      } else {
+        alert("Please enter a search term.");
+      }
+    }
+  </script>
 
 </body>
 </html>
