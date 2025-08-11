@@ -227,3 +227,29 @@ footer {
     color: white;
   }
 }
+
+
+
+/*for cart*/
+
+.cart-total {
+  text-align: right;
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.checkout-btn {
+  background: rgb(99, 150, 99);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-left: 10px;
+}
+
+.checkout-btn:hover {
+  background: rgb(1, 54, 1);
+}
+
