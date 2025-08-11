@@ -1,0 +1,229 @@
+    /*my part*/
+    /* Base */
+/* ========== BASE ========== */
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin: 0;
+  background: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ========== HEADER ========== */
+header {
+  background: teal;
+  color: white;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 26px;
+  letter-spacing: 1px;
+}
+
+/* NAVIGATION */
+nav {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffeb3b;
+}
+
+/* CART BADGE */
+#cart-count {
+  background: crimson;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 50%;
+  margin-left: 4px;
+}
+
+/* ========== PRODUCT GRID ========== */
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+
+.product-card {
+  background: white;
+  padding: 15px;
+  border: none;
+  width: 250px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.product-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+button {
+  padding: 8px 14px;
+  margin-top: 10px;
+  background: linear-gradient(to right, #007bff, #0056b3);
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: linear-gradient(to right, #0056b3, #003d80);
+  transform: scale(1.05);
+}
+
+/* DESCRIPTION BOX */
+.description-box {
+  padding: 15px;
+  margin: 20px;
+  background: #fff7e6;
+  border-left: 5px solid #ffcc80;
+  border-radius: 5px;
+  font-style: italic;
+}
+
+/* ========== FOOTER ========== */
+footer {
+  text-align: center;
+  background: darkcyan;
+  color: white;
+  padding: 15px;
+  margin-top: 40px;
+  font-size: 14px;
+}
+
+/* COOKIE BANNER */
+.cookie-banner {
+  position: fixed;
+  bottom: -100px;
+  left: 0;
+  right: 0;
+  background: #333;
+  color: white;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.2);
+  animation: slideUp 0.5s forwards;
+}
+
+@keyframes slideUp {
+  to {
+    bottom: 0;
+  }
+}
+
+.cookie-banner button {
+  background: crimson;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.cookie-banner button:hover {
+  background: #ff4d4d;
+}
+
+.cookie-banner a {
+  color: #ffcc00;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.cookie-banner a:hover {
+  color: #ffe680;
+}
+
+.cookie-banner p {
+  margin: 0;
+}
+
+/* ========== HAMBURGER ========== */
+.hamburger {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    background-color: teal;
+    width: 100%;
+    padding: 10px 0;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 1000;
+  }
+
+  nav a {
+    padding: 10px 20px;
+    display: block;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  nav.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+    color: white;
+  }
+}

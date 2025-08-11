@@ -1,55 +1,55 @@
 const products = [
   {
     name: "Stethoscope",
-    image: "./images/stetho.jpg",
+    image: "../images/stetho.jpg",
      description: "High-quality acoustic stethoscope.",
     price: "$45"
   },
   {
     name: "Crutch",
-    image: "./images/crutch.jpg",
+    image: "../images/crutch.jpg",
     description: "Aluminum crutch for walking support.",
     price: "$30"
   },
   {
     name: "Diabetes Machine",
-    image: "./images/diabetesmachine.jpg",
+    image: "../images/diabetesmachine.jpg",
     description: "Blood glucose monitor with test strips.",
     price: "$50"
   },
   {
     name: "Back Massager",
-    image: "./images/back.jpg",
+    image: "../images/back.jpg",
     description: "Electric back massager with heat.",
     price: "$60"
   },
   {
     name: "Syringe Pack",
-    image: "./images/syringepack.jpg",
+    image: "../images/syringepack.jpg",
     description: "Pack of sterile medical syringes.",
     price: "$15"
   },
   {
     name: "Firt Aid Kit",
-    image: "./images/firstaidkit.jpg",
+    image: "../images/firstaidkit.jpg",
     description: "Pack of sterile medical syringes.",
     price: "$15"
   },
   {
     name: "CPR Monitor",
-    image: "./images/cprmonitor.png",
+    image: "../images/cprmonitor.png",
     description: "Pack of sterile medical syringes.",
     price: "$15"
   },
   {
     name: "IBU profen",
-    image: "./images/ibuprofen.jpg",
+    image: "../images/ibuprofen.jpg",
     description: "Pack of sterile medical syringes.",
     price: "$15"
   },
   {
     name: "Wheelchair",
-    image: "./images/wheelchair.jpg",
+    image: "../images/wheelchair.jpg",
     description: "Pack of sterile medical syringes.",
     price: "$15"
 
