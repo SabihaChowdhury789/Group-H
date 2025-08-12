@@ -106,15 +106,7 @@ function updateCartCount() {
   if (count) count.innerText = `Cart (${cart.length})`;
 }
 
-function acceptCookies() {
-  document.cookie = "cookiesAccepted=true; max-age=31536000; path=/";
-  document.getElementById("cookieBanner").style.display = "none";
-}
 
-function declineCookies() {
-  document.cookie = "cookiesAccepted=false; max-age=31536000; path=/";
-  document.getElementById("cookieBanner").style.display = "none";
-}
 
 
 function loadEmail() {
@@ -130,10 +122,7 @@ document.addEventListener("DOMContentLoaded", () => {
   updateCartCount();
   loadEmail();
 
-  // Cookie banner
-  if (!document.cookie.includes("cookiesAccepted=true")) {
-    document.getElementById("cookieBanner").style.display = "flex";
-  }
+
 
   // Contact form
   const form = document.getElementById("contactForm");
