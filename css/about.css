@@ -119,3 +119,29 @@ body {
   object-fit: contain;
 }
 
+
+
+
+/* ========== About Us Icons ========== */
+.about-icon {
+  width: 100px;
+  height: 100px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+.value-icon {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* Value cards centered */
+.value-card {
+  text-align: center;
+}
+
+.value-card h3 {
+  margin: 10px 0 5px;
+}
