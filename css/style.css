@@ -1,6 +1,6 @@
 body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
       background-color: #f9f9f9;
       color: #333;
       animation: fadeIn 1s ease-in;
@@ -12,7 +12,7 @@ body {
     }
 
     header {
-      background-color: #87CEEB; /* Sky blue */
+      background-color: teal; 
       padding: 20px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       text-align: center;
@@ -125,12 +125,66 @@ body {
     }
 
     footer {
-      background-color: #eee;
+      background-color: darkcyan;
       padding: 20px;
       text-align: center;
       font-size: 14px;
       color: #666;
     }
 
+
+
+
+    
+/* COOKIE BANNER */
+.cookie-banner {
+  position: fixed;
+  bottom: -100px;
+  left: 0;
+  right: 0;
+  background: #333;
+  color: white;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.2);
+  animation: slideUp 0.5s forwards;
+}
+
+@keyframes slideUp {
+  to {
+    bottom: 0;
+  }
+}
+
+.cookie-banner button {
+  background: crimson;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.cookie-banner button:hover {
+  background: #ff4d4d;
+}
+
+.cookie-banner a {
+  color: #ffcc00;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.cookie-banner a:hover {
+  color: #ffe680;
+}
+
+.cookie-banner p {
+  margin: 0;
+}
 
 
