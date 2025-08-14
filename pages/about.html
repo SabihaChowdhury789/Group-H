@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About Us - Med-X-Mart</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../css/about.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+            <div class="logo-container">
+    <img src="../images/Med-X-Mart.jpg" alt="Med-X-Mart Logo" class="logo">
+
+
+    <h1>Med-X-Mart</h1>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="product.html">Products</a>
+
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+      <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+    </nav>
+  </header>
+<!--Testing-->
+  <!-- About Us Section -->
+  <main class="about-container">
+    <h2><img src="../images/handshake.png" alt="Who We Are Icon" class="about-icon"> Who We Are</h2>
+    <p>
+      Med-X-Mart is more than just a medical supply store — we are a committed partner in improving healthcare accessibility.
+      Founded with the belief that everyone deserves access to reliable and affordable medical equipment, we work tirelessly
+      to bridge the gap between quality healthcare products and the people who need them most.
+    </p>
+
+    <h2><img src="../images/mission.jpg" alt="Mission Icon" class="about-icon"> Our Mission</h2>
+    <p>
+      Our mission is simple yet powerful: to empower healthcare providers and individuals by delivering
+      trusted, safe, and cost-effective medical supplies right to their doorstep.
+      Whether it's for hospitals, clinics, or home use, we ensure that our products meet professional standards while remaining affordable.
+    </p>
+
+    <h2><img src="../images/helping-people.jpg" alt="Helping People Icon" class="about-icon"> How Med-X-Mart Helps</h2>
+    <p>
+      By providing a wide range of products — from first aid kits and mobility aids to diagnostic devices —
+      we help people live healthier and safer lives.
+      We cater to both professionals and everyday users, ensuring that everyone has the tools they need for better health management.
+    </p>
+
+    <h2>What We Value</h2>
+    <div class="about-values">
+      <div class="value-card">
+        <img src="../images/integrity.jpg" alt="Integrity Icon" class="value-icon">
+        <h3>Integrity</h3>
+        <p>We operate with honesty, transparency, and respect in every interaction with our customers and partners.</p>
+      </div>
+      <div class="value-card">
+        <img src="../images/innovation.jpg" alt="Innovation Icon" class="value-icon">
+        <h3>Innovation</h3>
+        <p>We constantly explore new solutions and improvements to better serve the healthcare community.</p>
+      </div>
+      <div class="value-card">
+        <img src="../images/customer.jpg" alt="Customer First Icon" class="value-icon">
+        <h3>Customer First</h3>
+        <p>Your needs come first. We listen, adapt, and strive to exceed your expectations in every way possible.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Med-X-Mart. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function updateCartCount() {
+      const countElement = document.getElementById("cart-count");
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+      // Ensure cart format is valid
+      if (cart.length && typeof cart[0] === "string") {
+        cart = cart.map(name => ({ name, quantity: 1 }));
+        localStorage.setItem("cart", JSON.stringify(cart));
+      }
+
+      let total = 0;
+      cart.forEach(item => total += item.quantity || 1);
+      countElement.innerText = `Cart (${total})`;
+    }
+    document.addEventListener("DOMContentLoaded", updateCartCount);
+  </script>
+
+</body>
+</html>
