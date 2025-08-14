@@ -31,7 +31,7 @@ const products = [
     price: "$15"
   },
   {
-    name: "Firt Aid Kit",
+    name: "First Aid Kit",
     image: "../images/firstaidkit.jpg",
     description: "Pack of sterile medical syringes.",
     price: "$15"
