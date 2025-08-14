@@ -3,7 +3,7 @@ const products = [
   {
     name: "Stethoscope",
     image: "../images/stetho.jpg",
-     description: "High-quality acoustic stethoscope.",
+     description: "The Classic Dual-Head Stethoscope is a trusted essential for healthcare professionals and medical students alike. Crafted with precision, it delivers exceptional acoustic sensitivity, allowing you to hear even the most subtle heart, lung, and body sounds with clarity.",
     price: "$45"
   },
   {
@@ -70,7 +70,10 @@ function renderProducts() {
       <h3>${product.name}</h3>
       <p>${product.description}</p>
       <p><strong>${product.price}</strong></p>
-      <button onclick="showDescription('${product.description}')">View</button>
+      <button onclick="showDescription('${product.name}', '${product.image}', '${product.description}', '${product.price}')">
+  View
+</button>
+
       <button onclick="addToCart('${product.name}')">Add to Cart</button>
     `;
     grid.appendChild(div);
@@ -363,6 +366,54 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+
+// Open the modal with product details
+function showDescription(name, image, description, price) {
+  document.getElementById("modalTitle").innerText = name;
+  document.getElementById("modalImage").src = image;
+  document.getElementById("modalDescription").innerText = description;
+  document.getElementById("modalPrice").innerText = price;
+  
+  document.getElementById("productModal").style.display = "block";
+}
+
+// Close the modal when X is clicked
+document.addEventListener("DOMContentLoaded", () => {
+  const closeBtn = document.querySelector("#productModal .close");
+  const modal = document.getElementById("productModal");
+
+  closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+
+  // Close modal when clicking outside the content
+  window.addEventListener("click", (event) => {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+});
+
+
+
+
+
+
+    function updateCartCount() {
+      const countElement = document.getElementById("cart-count");
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+      // Ensure cart format is valid
+      if (cart.length && typeof cart[0] === "string") {
+        cart = cart.map(name => ({ name, quantity: 1 }));
+        localStorage.setItem("cart", JSON.stringify(cart));
+      }
+
+      let total = 0;
+      cart.forEach(item => total += item.quantity || 1);
+      countElement.innerText = `Cart (${total})`;
+    }
+    document.addEventListener("DOMContentLoaded", updateCartCount);
 
 
 

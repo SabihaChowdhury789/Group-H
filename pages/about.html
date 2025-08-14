@@ -10,7 +10,7 @@
 
   <!-- Header -->
   <header>
-            <div class="logo-container">
+    <div class="logo-container">
     <img src="../images/Med-X-Mart.jpg" alt="Med-X-Mart Logo" class="logo">
 
 
@@ -77,24 +77,6 @@
   <footer>
     <p>&copy; 2025 Med-X-Mart. All rights reserved.</p>
   </footer>
-
-  <script>
-    function updateCartCount() {
-      const countElement = document.getElementById("cart-count");
-      let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-      // Ensure cart format is valid
-      if (cart.length && typeof cart[0] === "string") {
-        cart = cart.map(name => ({ name, quantity: 1 }));
-        localStorage.setItem("cart", JSON.stringify(cart));
-      }
-
-      let total = 0;
-      cart.forEach(item => total += item.quantity || 1);
-      countElement.innerText = `Cart (${total})`;
-    }
-    document.addEventListener("DOMContentLoaded", updateCartCount);
-  </script>
 
 </body>
 </html>
